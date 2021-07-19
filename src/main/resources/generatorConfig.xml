@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC
+ "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+ "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<context id="simple" targetRuntime="MyBatis3simple">
+		<jdbcConnection
+			connectionURL="jdbc:sqlserver://127.0.0.1:1433;databaseName=PIPATEST"
+			driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver" password="01test"
+			userId="test01" />
+
+		<javaModelGenerator
+			targetPackage="com.merck.catalog.admin.model"
+			targetProject="mdc/src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator 
+			targetPackage="mybatis.mapper"
+			targetProject="mdc/src/main/resources" />
+
+		<javaClientGenerator
+			targetPackage="com.merck.catalog.admin.dao" 
+			targetProject="mdc/src/main/java"
+			type="XMLMAPPER" />
+
+		<table tableName="TB_CAA001M" />
+		<table tableName="TB_CAB001M" />
+		<table tableName="TB_CAB002D" />
+		<table tableName="TB_CAB003D" />
+		<table tableName="TB_CAB004D" />
+		<table tableName="TB_CBA001M" />
+		<table tableName="TB_CBB001M" />
+		<table tableName="TB_SAA001M" />
+		<table tableName="TB_SAA002D" />
+		<table tableName="TB_SAF001D" />
+		<table tableName="TB_SAF002D" />
+		<table tableName="TB_SAF003D" />
+		<table tableName="TB_SAU001M" />
+		<table tableName="TB_SAU002D" />
+		<table tableName="TB_SAU002M" />
+	</context>
+</generatorConfiguration>
